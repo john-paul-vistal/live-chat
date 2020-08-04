@@ -1,4 +1,7 @@
 $(document).ready(function() {
+    window.onbeforeunload = function() {
+        return "You will get disconnected";
+    }
     var userName;
     var avatarImg;
 
@@ -30,7 +33,7 @@ $(document).ready(function() {
         if (payload.user == userName) {
             $('#chatBody').append('<div class="d-flex justify-content-end mb-4"><div class="msg_cotainer_send messagepx">' + payload.message + '<span class="msg_time_send">' + payload.timestamp + '</span></div><div class="img_cont_msg"><img src="' + payload.avatar + '" class="rounded-circle user_img_msg"></div></div>')
         } else {
-            $('#cahtBody').append('<div class="d-flex justify-content-start mb-4"> <div class = "img_cont_msg" ><img src = "' + payload.avatar + '"class = "rounded-circle user_img_msg" ></div><div class = "msg_cotainer messagepx">' + payload.message + '<span class = "msg_time" >' + payload.timestamp + '</span></div></div>')
+            $('#chatBody').append('<div class="d-flex justify-content-start mb-4"> <div class = "img_cont_msg" ><img src = "' + payload.avatar + '"class = "rounded-circle user_img_msg" ></div><div class = "msg_cotainer messagepx">' + payload.message + '<span class = "msg_time" >' + payload.timestamp + '</span></div></div>')
         }
 
     });

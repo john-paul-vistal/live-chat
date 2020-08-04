@@ -23,7 +23,7 @@ $(document).ready(function() {
             })
         }
     })
-    console.log(localStorage.getItem("avatarImg"))
+
     $('#logout').click(function() {
         Swal.fire({
             title: 'Are you sure?',
@@ -57,9 +57,9 @@ $(document).ready(function() {
     client.on('message', function(topic, message) {
         let payload = JSON.parse(message);
         if (payload.user == localStorage.getItem("userName")) {
-            $('#chatBody').append('<div class="d-flex justify-content-end mb-4"><div class="msg_cotainer_send messagepx">' + payload.message + '<span class="msg_time_send">' + payload.timestamp + '</span></div><div class="img_cont_msg"><img src="' + payload.avatar + '" class="rounded-circle user_img_msg"></div></div>')
+            $('#chatBody').append('<div class="d-flex justify-content-end mb-4"><div class="msg_cotainer_send messagepx">' + payload.message + '<br><span class="msg_time_send">' + payload.timestamp + ', ' + payload.user + '</span></div><div class="img_cont_msg"><img src="' + payload.avatar + '" class="rounded-circle user_img_msg"></div></div>')
         } else {
-            $('#chatBody').append('<div class="d-flex justify-content-start mb-4"> <div class = "img_cont_msg" ><img src = "' + payload.avatar + '"class = "rounded-circle user_img_msg" ></div><div class = "msg_cotainer messagepx">' + payload.message + '<span class = "msg_time" >' + payload.timestamp + '</span></div></div>')
+            $('#chatBody').append('<div class="d-flex justify-content-start mb-4"> <div class = "img_cont_msg" ><img src = "' + payload.avatar + '"class = "rounded-circle user_img_msg" ></div><div class = "msg_cotainer messagepx">' + payload.message + '<span class = "msg_time" >' + payload.timestamp + ', ' + payload.user + '</span></div></div>')
         }
 
     });

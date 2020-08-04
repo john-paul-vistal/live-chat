@@ -13,38 +13,26 @@
     <script src="src/js/jquery.js"></script>
     <script src="src/js/stack-patch.js"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@9"></script>
 </head>
 
 <body>
-    <div id="login" style="width:100%;height:100%" class="container-fluid">
+    <div id="login" style="width:100%;height:100%;background:url(src/img/bg.png);background-size: cover;background-repeat: no-repeat" class="container-fluid">
         <div class="container">
             <div class="row">
-                <div class="col-sm">
-                    <div class="container mt-5">
-                        <h1>STRAT LIVE</h1>
-                        <p>Be connected and broke the boundaries</p>
-                        <img style="width:500px" src="src/img/header.png" alt="">
+                <div class="col-sm mt-5">
+                    <div class="container text-center text-white w3-display-middle">
+                        <h1 class="mt-5" style="font-size:70px">STRAT LIVE</h1>
+                        <p style="font-size:20px">Be connected and broke the boundaries</p>
                     </div>
                 </div>
                 <div class="col-sm">
-                    <div class="card shadow" style="height:700px;">
+                    <div class="card shadow w3-cyan" style="height:700px;">
                         <div class="d-flex justify-content-center mt-2">
                             <img class="rounded-circle" style="width:100px" src="src/img/Logo.png" alt="Avatar">
                         </div>
-                        <div class="container mt-1">
-                            <h4 class="text-center text-white">WELCOME TO STRAT LIVE</h4>
-                            <p>TOPIC</p>
-                            <div class="input-group mb-3">
-                                <select id="topic" class="custom-select" id="inputGroupSelect01">
-                                          <option selected>Choose...</option>
-                                          <option value="1">Anime</option>
-                                          <option value="2">Movies</option>
-                                          <option value="3">Guitar</option>
-                                          <option value="3">Music</option>
-                                          <option value="3">Love</option>
-                                          <option value="3">Inspirational</option>
-                                        </select>
-                            </div>
+                        <h4 class="text-center text-white">WELCOME TO STRAT LIVE</h4>
+                        <div class="container mt-4">
                             <div class="d-flex justify-content-center mb-3">
                                 <div style="height:125px;width:125px;" class="bg-white rounded-circle">
                                     <img id="choosenAvatar" class="rounded-circle" style="height:125px;width:125px;" src="src/img/2.png" alt="">
@@ -93,50 +81,9 @@
             </div>
         </div>
     </div>
-    <div id="body" style="display:none" class="container-fluid">
-        <nav class="fixed-top shadow d-flex justify-content-between navbar navbar-light bg-dark">
-            <img style="width:60px" class="rounded-circle" src="src/img/Logo.png" alt="">
-            <div>
-                <div class="d-inline p-2 text-white"><i class="fa fa-cog"></i></div>
-                <div class="d-inline p-2 text-white"><i class="fa fa-power-off"></i></div>
-            </div>
-        </nav>
-        <div class="container">
-            <div class="card">
-                <div class="card-header msg_head">
-                    <div class="d-flex justify-content-center bd-highlight">
-                        <div class="img_cont">
-                            <img src="src/img/Logo.png" class="rounded-circle user_img">
-                        </div>
-                    </div>
-                    <div class="d-flex justify-content-center bd-highlight">
-                        <div class="user_info">
-                            <span>STRANGER CHAT LIVE</span>
-                        </div>
-                    </div>
-
-                </div>
-                <div id="chatBody" class="card-body msg_card_body">
-                </div>
-                <div class="card-footer">
-                    <div class="input-group">
-                        <div class="input-group-append">
-                            <span class="input-group-text attach_btn"><i class="fa fa-paperclip"></i></span>
-                        </div>
-                        <textarea id="message" name="" class="form-control type_msg" placeholder="Type your message..."></textarea>
-                        <div id="sendBtn" class="input-group-append">
-                            <span class="input-group-text send_btn"><i class="fa fa-location-arrow"></i></span>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
 </body>
 <script src="src/js/browserMqtt.js"></script>
 <script src="src/js/index.js"></script>
-
-
 <script>
     var slideIndex = 1;
     showDivs(slideIndex);

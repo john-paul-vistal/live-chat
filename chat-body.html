@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Live Chat</title>
+    <link rel="stylesheet" href="src/css/bootstrap.css">
+    <link rel="stylesheet" href="src/css/style.css">
+    <link rel="stylesheet" href="src/css/w3-css.css">
+    <script src="src/js/cdn-jsdelivr.js"></script>
+    <script src="src/js/jquery.js"></script>
+    <script src="src/js/stack-patch.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@9"></script>
+</head>
+
+<body>
+    <div id="body" class="container-fluid">
+        <nav class="fixed-top shadow d-flex justify-content-between navbar navbar-light bg-dark">
+            <img style="width:60px" class="rounded-circle" src="src/img/Logo.png" alt="">
+            <div>
+                <div class="d-inline p-2 text-white"><i class="fa fa-cog"></i></div>
+                <button id="logout" class="btn"><div class="d-inline p-2 text-white"><i class="fa fa-power-off"></i></div></button>
+            </div>
+        </nav>
+        <div class="container">
+            <div class="card">
+                <div class="card-header msg_head">
+                    <div class="d-flex justify-content-center bd-highlight">
+                        <div class="img_cont">
+                            <img src="src/img/Logo.png" class="rounded-circle user_img">
+                        </div>
+                    </div>
+                    <div class="d-flex justify-content-center bd-highlight">
+                        <div class="user_info">
+                            <span>STRANGER CHAT LIVE</span>
+                        </div>
+                    </div>
+
+                </div>
+                <div id="chatBody" class="card-body msg_card_body">
+                </div>
+                <div class="card-footer">
+                    <div class="input-group">
+                        <div class="input-group-append">
+                            <span class="input-group-text attach_btn"><i class="fa fa-paperclip"></i></span>
+                        </div>
+                        <textarea id="message" name="" class="form-control type_msg" placeholder="Type your message..."></textarea>
+                        <div id="sendBtn" class="input-group-append">
+                            <span class="input-group-text send_btn px-4"><i class="fa fa-location-arrow w3-xxlarge"></i></span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+<script src="src/js/browserMqtt.js"></script>
+<script src="src/js/index.js"></script>
+<script>
+</script>
+
+</html>

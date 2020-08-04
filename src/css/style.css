@@ -192,8 +192,7 @@ html {
 }
 
 .msg_time {
-    position: absolute;
-    left: 0;
+    float: left;
     bottom: -15px;
     color: rgba(255, 255, 255, 0.5);
     font-size: 10px;

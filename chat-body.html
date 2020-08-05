@@ -22,7 +22,7 @@
 </head>
 
 <body>
-    <div id="loader" style="width:100%;height: 100%;z-index: 10;" class="w3-white">
+    <div id="loader" style="width:100%;height: 1000px;z-index: 10;" class="w3-white">
         <div class="row">
             <div class="col-md-12">
                 <div style="margin-top:200px" class="loader">
@@ -84,6 +84,26 @@
             </div>
         </div>
     </div>
+    <footer id="footer" style="display:none;" class="site-footer">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-8 col-sm-6 col-xs-12">
+                    <p class="copyright-text">Copyright &copy; 2020 All Rights Reserved by
+                        <a href="#">John Paul Vistal</a>.
+                    </p>
+                </div>
+
+                <div class="col-md-4 col-sm-6 col-xs-12">
+                    <ul class="social-icons">
+                        <li><a class="facebook" href="#"><i class="fa fa-facebook"></i></a></li>
+                        <li><a class="twitter" href="#"><i class="fa fa-twitter"></i></a></li>
+                        <li><a class="google" href="#"><i class="fa fa-google"></i></a></li>
+                        <li><a class="linkedin" href="#"><i class="fa fa-linkedin"></i></a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </footer>
 </body>
 <script src="src/js/browserMqtt.js"></script>
 <script src="src/js/index.js"></script>
@@ -92,6 +112,10 @@
         setTimeout(function() {
             $('#loader').css('display', 'none')
             $('#body').css('display', 'block')
+        }, 3000);
+        setTimeout(function() {
+            $('#body').css('display', 'block')
+            $('#footer').css('display', 'block')
         }, 3000);
 
         $("#message").emojioneArea({
